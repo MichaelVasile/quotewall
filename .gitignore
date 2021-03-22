@@ -1,4 +1,7 @@
 .idea/
 *.iml
 quotes.db
-venv/
+venv
+venv/*
+**.pyc
+__pycache__/app.cpython-38.pyc

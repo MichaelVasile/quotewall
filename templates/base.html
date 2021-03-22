@@ -18,9 +18,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#addQuoteModal">Add quote</a>
-      </li>
+        {%  block navbar_links %}
+        {%  endblock %}
     </ul>
   </div>
 </nav>
@@ -30,33 +29,6 @@
     <footer>
         <p>Disco Quote Wall v1.0</p>
     </footer>
-
-    <div class="modal fade" id="addQuoteModal" tabindex="-1" aria-labelledby="addQuoteModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="addQuoteModalLabel">New quote</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">x</button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" id="name">
-              </div>
-              <div class="mb-3">
-                <label for="quote" class="col-form-label">Quote:</label>
-                <textarea class="form-control" id="quote"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Add quote</button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>

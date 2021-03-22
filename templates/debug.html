@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Debugging - Disco Quote Wall</title>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h2>Debug</h2>
+    <table class="table">
+        <tr>
+            <th>Quote</th>
+            <th>Name</th>
+            <th>Context</th>
+        </tr>
+        {% for quote in quotes %}
+        <tr>
+            <td>{{ quote.quote }}</td>
+            <td>{{ quote.name }}</td>
+            <td>{{ quote.context }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/" method="POST">
+        <input type="text" name="quote" id="quote">
+        <input type="text" name="name" id="name">
+        <input type="text" name="context" id="context">
+        <input type="submit" value="Add Quote">
+    </form>
+</div>
+{% endblock %}

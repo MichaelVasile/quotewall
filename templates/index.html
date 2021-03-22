@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Disco Quote Wall</title>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="card-columns">
+        {% for quote in quotes %}
+        <div class="card p-3">
+            <blockquote class="blockquote mb-0 card-body">
+              <p>{{ quote.quote }}</p>
+              <footer class="blockquote-footer">
+                <small class="text-muted">
+                  {{ quote.name }}, {{ quote.context }}
+                </small>
+             </footer>
+           </blockquote>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

@@ -50,11 +50,8 @@ def debug():
             return redirect('/')
         except:
             return "There was an error..."
-
-        print('If')
     else:
         quotes = Quotes.query.order_by(Quotes.date_created.desc()).all()
-        print('Else')
         return render_template('debug.html', quotes=quotes)
 
 # @app.route('/quotes')

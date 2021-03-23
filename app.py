@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from os import path
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///quotes.db'
@@ -59,4 +60,7 @@ def debug():
 #     return render_template('index.html')
 
 if __name__ == "__main__":
+    if not path.exists('quotes.db'):
+        db.create_all()
+
     app.run(debug=True)
